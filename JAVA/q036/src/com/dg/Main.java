@@ -1,5 +1,6 @@
 package com.dg;
 
+import com.dg.gym.data.Member;
 import com.dg.gym.display.Title;
 
 public class Main {
