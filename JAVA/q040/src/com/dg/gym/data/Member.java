@@ -10,32 +10,27 @@ public class Member {
 		this.tel = tel;
 		this.sex = sex;
 	}
-
+	
 	public void info() {
-		System.out.println("이름 : " + name + " / 전화번호 : " + tel + " / 성별 : " + sex);
+		System.out.println("이름 : " + name + " / 번호 : " + tel + " / 성별 : " + sex);
 	}
-
-	void setName(String name) {
+	
+	public void setName(String name) {
 		this.name = name;
 	}
-
-	String getName() {
+	public String getName() {
 		return name;
 	}
-
-	void setTel(String tel) {
+	public void setTel(String tel) {
 		this.tel = tel;
 	}
-
-	String getTel() {
+	public String getTel() {
 		return tel;
 	}
-
-	void setSex(String sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
-
-	String getSex() {
+	public String getSex() {
 		return sex;
 	}
 }
