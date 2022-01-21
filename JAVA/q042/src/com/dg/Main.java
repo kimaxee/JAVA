@@ -9,6 +9,7 @@ import com.dg.gym.proc.DeleteMember;
 import com.dg.gym.proc.ExitProgram;
 import com.dg.gym.proc.JoinMembership;
 import com.dg.gym.proc.ListMembers;
+import com.dg.gym.proc.ModifyMember;
 
 public class Main {
 	public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		boolean run = true;
 		while (run) {
-			System.out.println("\n명령을 입력하세요: ( 1.회원정보 | 2.회원가입 | 3.회원삭제 | 4.회원수정 | e.종료 )");
+			System.out.println("\n명령을 입력하세요: ( 1.회원정보 | 2.회원가입 | 3.회원삭제 | 4.회원정보수정 | e.종료 )");
 			String cmd = sc.next();
 			switch (cmd) {
 			case "1": // 회원정보
@@ -37,30 +38,10 @@ public class Main {
 			case "3": // 회원삭제
 				DeleteMember del = new DeleteMember();
 				del.proc(members);
-				
-				System.out.println("====================3.회원삭제====================");
-				System.out.print("삭제할 회원 입력 : ");
-				String deleteMember = sc.next();
-				int deleteIndex = -1;
-
-				for (int i = 0; i < members.size(); i++) {
-					if (members.get(i).getName().equals(deleteMember)) {
-						deleteIndex = i;
-						break;
-					}
-				}
-				
-				if (deleteIndex == -1) {
-					System.out.println("*****회원정보가 없습니다*****");
-					System.out.println("================================================");
-				} else {
-					members.remove(deleteIndex);
-					System.out.println("*****회원이 삭제되었습니다*****");
-					System.out.println("================================================");
-				}
 				break;
-			case "4": // 회원수정
-				System.out.println("====================4.회원수정====================");
+			case "4": // 회원정보수정
+				ModifyMember modify = new ModifyMember();
+				modify.proc(members);
 				break;
 			case "e": // 종료하기
 				ExitProgram exit = new ExitProgram();
