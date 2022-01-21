@@ -1,18 +1,18 @@
 package com.dg.gym.data;
 
 public class Member {
-	private String name;
-	private String tel;
-	private String sex;
-
-	public Member(String name, String tel, String sex) {
+	String name;    //회원 이름
+	String tel;     //회원 전화번호
+	String gender;  //회원 성별
+	
+	public Member(String name, String tel, String gender) {
 		this.name = name;
 		this.tel = tel;
-		this.sex = sex;
+		this.gender = gender;
 	}
 	
 	public void info() {
-		System.out.println("이름 : " + name + " / 번호 : " + tel + " / 성별 : " + sex);
+		System.out.println("이름 : " + name + " / 전화번호 : " + tel + " / 성별 : " + gender);
 	}
 	
 	public void setName(String name) {
@@ -21,16 +21,19 @@ public class Member {
 	public String getName() {
 		return name;
 	}
+	
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
 	public String getTel() {
 		return tel;
 	}
-	public void setSex(String sex) {
-		this.sex = sex;
+	
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
-	public String getSex() {
-		return sex;
+	public String getGender() {
+		return gender;
 	}
 }
+
