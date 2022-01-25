@@ -2,12 +2,12 @@ package com.dg.chicken.menu;
 
 import java.util.ArrayList;
 
-import com.dg.chicken.data.Flavor;
+import com.dg.chicken.data.Product;
 
 public class Seasoning {
-	public void proc(ArrayList<Flavor> flavors) {
+	public void proc(ArrayList<Product> flavors) {
 		System.out.println("-----------------------");
-		for (Flavor f : flavors) {
+		for (Product f : flavors) {
 			f.info();
 		}
 		System.out.println("-----------------------");
